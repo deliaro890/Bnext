@@ -12,10 +12,15 @@
 		</select>
 		<input type="button" name="boton" id="boton" onclick="requestData()" value="ObtenerDatos"><!--CON BUTTON NO WORKS .__.-->
 	</form>
+  
+  
 
-	<div id="data">
+	<div id="data" style='display:none'>
 		<form>
-			<input type="name" name="name" placeholder="hola" disabled="">
+			<input type="" name="name" value="" id="name_received" disabled>
+			<input type="" name="surname" value="" id="surname_received" disabled>
+			<input type="" name="email" value=""  id="email_received" disabled>
+			<input type="" name="phone" value="" id="phone_received">
 		</form>
 	</div>
 	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>

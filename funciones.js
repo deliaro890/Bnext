@@ -108,11 +108,15 @@ function requestData(){
   var dir = api_url+ "?id=" + id
 
 	$.getJSON(dir, function(data){
-		
+		    var datos = data
         console.log(data);
         console.log(JSON.stringify(data, null, "  "));
 
         document.getElementById('data').style.display='block'
+        document.getElementById('name_received').value=datos.data.name;
+        document.getElementById('surname_received').value=datos.data.surname;
+        document.getElementById('email_received').value=datos.data.email;
+        document.getElementById('phone_received').value=datos.data.phone;
         
 
     });
