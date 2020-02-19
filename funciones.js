@@ -124,5 +124,30 @@ function requestData(){
 
 
 
+}sendData
+
+function sendData(){
+
+	var id = document.getElementById('number').value
+	var api_url = 'https://api.bnext.io/partner_test/user/'
+  var dir = api_url+id
+
+	$.getJSON(dir, function(data){
+		    var datos = data
+        console.log(data);
+        console.log(JSON.stringify(data, null, "  "));
+
+        document.getElementById('data').style.display='block'
+        document.getElementById('name_received').value=datos.data.name;
+        document.getElementById('surname_received').value=datos.data.surname;
+        document.getElementById('email_received').value=datos.data.email;
+        document.getElementById('phone_received').value=datos.data.phone;
+        
+
+    });
+
+
+
+
 }
 
