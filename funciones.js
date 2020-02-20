@@ -1,15 +1,19 @@
 
+//función para consumir la api que devuelve la información del cliente
+
 function requestData(){
 
 	var id = document.getElementById('number').value
 	var api_url = 'https://api.bnext.io/partner_test/user'
-  var dir = api_url+ "?id=" + id
+  var dir = api_url+ "?id=" + id  //formé la url de la api
 
+  //Se obtiene la información de la api
 	$.getJSON(dir, function(data){
 		    var datos = data
         console.log(data);
         console.log(JSON.stringify(data, null, "  "));
 
+        //se pusieron los valores recibidos de la api en los inputs del form
         document.getElementById('data').style.display='block'
         document.getElementById('name_received').value=datos.data.name;
         document.getElementById('surname_received').value=datos.data.surname;
@@ -22,16 +26,15 @@ function requestData(){
 }
 
 
+//función para enviar a la api los datos recabados del form
 function sendData2_0(){
-  var url = "https://api.bnext.io/partner_test/user/"
-
+ 
+  //se forma la url de la api
   var id = document.getElementById('number').value
 	var api_url = "https://api.bnext.io/partner_test/user/"
   var dir = api_url+id
-  console.log(document.getElementById("check").value)
-  console.log($("#check:checked").val())
   
-
+  //se establecen los datos a enviar a la api
   data={
     "id": parseInt(id),
 	   "name":document.getElementById('name_received').value,
@@ -45,13 +48,10 @@ function sendData2_0(){
      //"check":document.getElementById("check").value
   }
 console.log(data);
-
+  
+  //se envían los datos a la api
 	$.post(dir, function( data ) {
     console.log(data)
   })
-
-
-
-
 }
 
