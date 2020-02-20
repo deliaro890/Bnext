@@ -17,15 +17,17 @@
 
 	<div id="data" style='display:none'>
 		<form>
-			<input type="" name="name" value="" id="name_received" disabled>
-			<input type="" name="surname" value="" id="surname_received" disabled>
-			<input type="" name="email" value=""  id="email_received" disabled>
-			<input type="" name="phone" value="" id="phone_received">
-			<input type="" name="age" id="age_received">
-			<label>cantidad</label><input type="number" name="loan_amount" id='loan_amount' required>
-			<label>fecha</label><input type="date" name="loan_date" id='loan_date'>
-			<label>semanas</label><input type="number" name="loan_weeks" id='loan_weeks' required>
-			<label>Aceptar térnimos y condiciones</label><input type="checkbox" name="terminos">
+
+			<label>Nombre</label><input type="" name="name_received"  id="name_received" disabled>
+			<label>Apellido</label><input type="" name="surname_received"  id="surname_received" disabled>
+			<label>Correo</label><input type="" name="email_received"   id="email_received" disabled>
+			<label>Telefono</label><input type="" name="phone_received"  id="phone_received">
+			<label>Edad</label><input type="" name="age_received"  id="age_received">
+			<label>cantidad</label><input type="number" name="loan_amount" id="loan_amount" min="10" max="1000"required>
+			<label>fecha</label><input type="date" name="loan_date" id="loan_date">
+			<label>semanas</label><input type="number" name="loan_weeks" id="loan_weeks" required>
+			<label>Aceptar térnimos y condiciones</label><input type="checkbox" name="check" id="check">
+
 
 			<input type="button" name="boton2" id="boton2" onclick="sendData()" value="Enviar_Datos">
 
